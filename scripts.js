@@ -1,4 +1,11 @@
-const screen = document.querySelector("#calcScreen")
+var screen = document.querySelector("#calcScreen");
+var num = document.querySelectorAll(".num");
+numberino = 0;
 
+function addToScreen(){
+    screen.append(this.innerText);
+}
 
-console.log("The screen is called" + screen);
+for (let i = 0; i < num.length; i++){
+    num[i].addEventListener("click", addToScreen);
+}
