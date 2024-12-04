@@ -19,6 +19,9 @@ body{
 }
 
 #calcScreen{
+    text-align: right;
+    padding-top: 40px;
+    font-size: 40px;
     border: 4px solid red;
     border-radius: 5px;
     width: 320px;
