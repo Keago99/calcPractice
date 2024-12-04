@@ -2,33 +2,23 @@ const screen = document.querySelector("#calcScreen");
 const num = document.querySelectorAll(".num");
 const opperators = document.querySelectorAll(".operator");
 const clear = document.querySelector("#clear");
-var operators = {};
-var numbers = {};
+var opperatorArray = [];
+var numberArray = [];
 
+function equals(){
+    console.log("this is the equals button");
+}
 
 function operate(){
+    let numbertoNumbers = 0;
     if (screen.innerText != "" && screen.innerText.length < 9){
-        switch (this.innerText){
-            case "+":
-                console.log("its a plus");
-                break;
-            
-            case "-":
-                console.log("its a minus");
-                break;
-            
-            case "%":
-                console.log("its a divide");
-                break;
-
-            case "X":
-                console.log("its a multiplication");
-                break;
-            default:
-                console.log("who knows what it is");
-        }
+        opperatorArray.push(this.innerText);
+        numbertoNumbers = parseInt(screen.innerText);
+        numberArray.push(numbertoNumbers);
+        clearScreen();
     }
 }
+
 
 function clearScreen(){
     screen.innerText = "";
